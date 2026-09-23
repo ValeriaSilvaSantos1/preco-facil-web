@@ -1,0 +1,116 @@
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 100px;
+    padding-bottom: 80px;
+}
+
+h1 {
+    color: #fff;
+    font-size: 32px;
+}
+
+#logo_precofacil {
+    width: 250px; 
+    height: auto; 
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.grupo-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; 
+}
+
+label {
+    color: #ffffff; 
+    font-family: 'Inter', sans-serif; 
+    font-size: 14px; 
+    font-weight: 500; 
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+}
+
+form button[type="button"] {
+    background-color: #0b3d16; 
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+form button[type="button"]:hover {
+    background-color: #40d76b; 
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(30, 130, 60, 0.4); 
+}
+
+.botao-lixeira {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+.botao-lixeira:hover {
+    transform: scale(1.15); 
+    background-color: rgba(255, 255, 255, 0.1); 
+}
+
+#lixeira_apagar {
+    width: 30px; 
+    height: auto; 
+    display: block;
+}
+
+.lista-produtos {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.produto-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 8px;
+    width: 100%;
+    color: #fff;
+}
+
+.info-produto {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    text-align: left; 
+}
+
+.preco-destaque {
+    color: #89d957;
+    font-weight: bold;
+}
