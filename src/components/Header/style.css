@@ -19,15 +19,22 @@
     height: auto;
 }
 
-.btn-historico {
+.btn-nav-link {
     background-color: #ffffff;
     color: #0b3d16;
-    border: none;
     padding: 8px 20px;
     border-radius: 30px;
     font-weight: bold;
     font-family: 'Inter', sans-serif;
-    cursor: not-allowed;
-    opacity: 0.85;
+    font-size: 14px;
+    text-decoration: none;
+    margin-left: 15px;
+    cursor: pointer;
     transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-nav-link:hover {
+    background-color: #e2e8f0;
+    transform: translateY(-2px);
 }

@@ -114,3 +114,18 @@ form button[type="button"]:hover {
     color: #89d957;
     font-weight: bold;
 }
+
+.mensagem-vazia {
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  background-color: rgba(11, 46, 19, 0.45);
+  border: 1px dashed rgba(255, 255, 255, 0.35);
+  border-radius: 12px;
+  padding: 24px 16px;
+  margin-top: 25px;
+  font-size: 15px;
+  font-weight: 500;
+  opacity: 0.9;
+  box-sizing: border-box;
+}

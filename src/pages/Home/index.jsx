@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 import "./style.css";
-import Trash from "../../assets/trash.svg";
 import Logo from "../../assets/logo-preco-facil.png";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import ProdutoCard from "../../components/ProdutoCard";
 
 function Home() {
   const [produtos, setProdutos] = useState([]);
@@ -171,35 +171,20 @@ function Home() {
       </form>
 
       <div className="lista-produtos">
-        {produtos.slice(-3).map((produto) => {
-          const produtoId = produto.id || produto._id;
-          const quantidadeValida = produto.quantidade > 0 ? produto.quantidade : 1;
-          const custoUnitario = produto.custoBase / quantidadeValida;
-          const precoVendaUnitario = custoUnitario + (custoUnitario * produto.porcentagemLucro);
-
-          return (
-            <div key={produtoId} className="produto-card">
-              <div className="info-produto">
-                <p><strong>Produto:</strong> {produto.nome} ({produto.tipoEmbalagem})</p>
-                <p><strong>Quantidade:</strong> {produto.quantidade}</p>
-                <p><strong>Custo Unitário:</strong> R$ {custoUnitario.toFixed(2)}</p>
-                <p className="preco-destaque">
-                  <strong>Preço Venda Unitário:</strong> R$ {precoVendaUnitario.toFixed(2)}
-                </p>
-              </div>
-              <button 
-                type="button" 
-                className="botao-lixeira"
-                onClick={() => deletarProduto(produtoId)}
-              >
-                <img src={Trash} alt="lixeira" id="lixeira_apagar" />
-              </button>
-            </div>
-          );
-        })}
+        {produtos.length === 0 ? (
+          <p className="mensagem-vazia">Nenhum produto cadastrado ainda.</p>
+        ) : (
+          produtos.slice(-3).map((produto) => (
+            <ProdutoCard 
+              key={produto.id || produto._id} 
+              produto={produto} 
+              aoDeletar={deletarProduto} 
+            />
+          ))
+        )}
       </div>
 
-      <Footer />
+      <Footer ano={new Date().getFullYear()} />
     </div>
   );
 }
